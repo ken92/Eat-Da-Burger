@@ -1,4 +1,4 @@
-# FriendFinder
+# Eat-Da-Burger
 *Friend Matching Application Based on Chakra Balance Questions*
 
 Application is deployed to Heroku (https://fathomless-crag-68766.herokuapp.com/)
