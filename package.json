@@ -1,7 +1,7 @@
 {
   "name": "Eat-Da-Burger",
   "version": "1.0.0",
-  "description": "*Friend Matching Application Based on Chakra Balance Questions*",
+  "description": "*Online burger ordering application*",
   "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -12,7 +12,7 @@
     "url": "git+https://github.com/drunnals313/Eat-Da-Burger.git"
   },
   "keywords": [],
-  "author": "",
+  "author": "Dave Runnals",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/drunnals313/Eat-Da-Burger/issues"
@@ -25,6 +25,7 @@
     "loglevel": "^1.6.1",
     "method-override": "^2.3.10",
     "mysql": "^2.15.0",
-    "path": "^0.12.7"
+    "path": "^0.12.7",
+    "sequelize": "^4.37.10"
   }
 }
