@@ -25,7 +25,7 @@ app.set("view engine", "handlebars");
 
 var routes = require("./controllers/burgers_controller.js");
 
-app.use(routes); // do I have these routes wrong for heroku deploy?
+app.use("/", routes);
 
 app.listen(PORT, function() {
 	// Log (server-side) when our server has started
