@@ -1,11 +1,12 @@
-CREATE DATABASE burger_db;
-USE burger_db;
+CREATE DATABASE burgers_db;
+USE burgers_db;
 
-CREATE TABLE `burgers` (
-  `id` Int( 11 ) AUTO_INCREMENT NOT NULL,
-  `burger_name` VARCHAR( 255) NOT NULL,
-  `devoured` BOOLEAN( 255 ) NOT NULL,
-  `created_at` DATETIME NOT NULL,
 
-  PRIMARY KEY ( `id` ) 
-);
+CREATE TABLE burgers(
+	id INTEGER auto_increment not null,
+    burger_name VARCHAR(50),
+    devoured BOOLEAN DEFAULT false,
+    date TIMESTAMP not null DEFAULT current_timestamp,
+    primary key(id)
+    );
+    

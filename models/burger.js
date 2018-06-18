@@ -1,30 +1,22 @@
-module.exports = function(sequelize, DataTypes) {
-    // Define the Burger Sequelize model
-    var Burger = sequelize.define("burgers", 
-      {
-        // The name identifying the burger
-        name: {
-          type: DataTypes.STRING,
-          allowNull: false
-        },
-        // The availability boolean
-        devoured: {
-          type: DataTypes.BOOLEAN,
-          defaultValue: false
-        }
-      }, {
-        classMethods: {
-          associate: function(models) {
-            // Burger is associated with one customer
-            Burger.belongsTo(models.Customer, {
-              onDelete: "CASCADE",
-              foreignKey: {
-                allowNull: true
-              }
-            });
-          }
-        }
-      });
-  
-    return Burger;
-  };
+//importing the ORM to create the functions that will interact with the database
+var orm = require("../config/orm.js");
+
+var burger = {
+    selectAll: function (cb) {
+        orm.selectAll(function (res) {
+            cb(res);
+        });
+    },
+    insertOne: function (burger, cb) {
+        orm.insertOne(burger, function (res) {
+            cb(res);
+        });
+    },
+    updateOne: function (id, cb) {
+        orm.updateOne([id], function (res) {
+            cb(res);
+        });
+    }
+};
+
+module.exports = burger;
