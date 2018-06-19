@@ -25,7 +25,7 @@ app.set("view engine", "handlebars");
 
 var routes = require("./controllers/burgers_controller.js");
 
-app.use("/", routes);
+app.use(routes); // is this correct?   no /?
 
 app.listen(PORT, function() {
 	// Log (server-side) when our server has started
