@@ -1,5 +1,5 @@
 var express = require('express');
-//var methodOverride = require('method-override');
+
 var bodyParser = require('body-parser');
 
 
@@ -13,7 +13,7 @@ app.use(bodyParser.urlencoded({
     extended: false
 }));
 app.use(bodyParser.json());
-//app.use(methodOverride("_method"));
+
 
 
 var exphbs = require("express-handlebars");
@@ -25,9 +25,9 @@ app.set("view engine", "handlebars");
 
 var routes = require("./controllers/burgers_controller.js");
 
-app.use(routes); // is this correct?   no /?
+app.use(routes); 
 
 app.listen(PORT, function() {
-	// Log (server-side) when our server has started
+	
 	console.log("Server listening on: http://localhost:" + PORT);
   });
