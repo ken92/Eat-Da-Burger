@@ -1,5 +1,5 @@
 var mysql = require('mysql');
-
+//cleardb heroku add ons needed   
 var connection = mysql.createConnection({
   host: process.env.DB_HOST || "localhost",
   port: 3306,
